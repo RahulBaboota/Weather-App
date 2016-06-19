@@ -116,7 +116,8 @@ div
   background: #44DAF9;
 }*/
 
-@-webkit-keyframes moonrise {
+@-webkit-keyframes moonrise 
+{
   0% {
     -webkit-transform: rotate(0deg);
     transform: rotate(0deg);
@@ -127,7 +128,34 @@ div
   }
 }
 
-@keyframes moonrise {
+@-o-keyframes moonrise
+{
+	0%{
+		-webkit-transform: rotate(0deg);
+		tranform: rotate(0deg);
+	}
+	100% {
+		-webkit-transform: rotate(90deg);
+		transform: rotate(90deg);
+	}
+}
+
+@-moz-keyframes moonrise
+{
+	0% {
+		-webkit-tranform: rotate(0deg);
+		tranform: rotate(0deg);
+	}
+	100% {
+		-webkit-transform: rotate(90deg);
+		transform: rotate(90deg)
+	}
+} 
+
+
+
+@keyframes moonrise 
+{
   0% {
     -webkit-transform: rotate(0deg);
     transform: rotate(0deg);
@@ -137,3 +165,5 @@ div
     transform: rotate(90deg);
   }
 }
+
+
