@@ -1,10 +1,11 @@
 body 
 {
   height: 100%;
-  background: #232526; /* fallback for old browsers */
-  background: -webkit-linear-gradient(to left, #232526 , #414345); /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to left, #232526 , #414345); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-        
+  background: #22313F; /* fallback for old browsers */
+  /*background: -webkit-linear-gradient(to left, #232526 , #414345); /* Chrome 10-25, Safari 5.1-6 */*/
+  /*background: linear-gradient(to left, #232526 , #414345);  W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+   */
+  /*overflow-y: hidden;*/
+  /*overflow-x: hidden;     */
 }
 
 div 
@@ -94,19 +95,32 @@ div
 	width: 650px;
 	border-radius: 1300px 0 0 1300px;
 	margin-left: -640px;
-  	margin-top: -600px;
-  	/*border: dashed rgba(256,256,256,0.5);
-  	border-width: 1px;*/
-  	-webkit-transform: rotate(90deg);
-  	transform: rotate(90deg);
-  	-webkit-animation-name: moonrise;
-  	animation-name: moonrise;
-  	-webkit-animation-duration: 3s;
-  	animation-duration: 3s;
-  	-webkit-animation-iteration-count: 1;
-  	animation-iteration-count: 1;
-  	-webkit-animation-timing-function: cubic-bezier(0.5,0.5,0.5,0.5);
-  	animation-timing-function: cubic-bezier(0.5,0.5,0.5,0.5);  
+  margin-top: -600px;
+  /*border: dashed rgba(256,256,256,0.5);
+  border-width: 1px;*/
+  -webkit-transform: rotate(90deg);
+  transform: rotate(90deg);
+  -webkit-animation-name: moonrise;
+  animation-name: moonrise;
+  -webkit-animation-duration: 3s;
+  animation-duration: 3s;
+  -webkit-animation-iteration-count: 1;
+  animation-iteration-count: 1;
+  -webkit-animation-timing-function: cubic-bezier(0.5,0.5,0.5,0.5);
+  animation-timing-function: cubic-bezier(0.5,0.5,0.5,0.5);  
+}
+
+#weather-box
+{
+  height: 700px;
+  width: 970px;
+  border-radius: 700px 0 0 0;
+  margin-left: -175px;
+  margin-top: -260px;
+  background: #22313F;
+  /*background: -webkit-linear-gradient(to right, #232526 , #34495E);  /*Chrome 10-25, Safari 5.1-6 */*/
+  /*background: linear-gradient(to right, #232526 ,#414345 );  W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
 }
 
 
