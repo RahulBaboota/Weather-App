@@ -160,8 +160,8 @@ div
   /*border-radius: 700px 0 0 0;*/
   margin-left: -115px;
   margin-top: -250px;
-  /*border: solid #daf6ff;*/
-  /*border-width: 1px;*/
+  border: solid #daf6ff;
+  border-width: 1px;
 }
 
 #location-icon
@@ -186,7 +186,7 @@ div
   /*border: solid #daf6ff;*/
   /*border-width: 1px;*/
   margin-top: -300px;
-  margin-left: -150px;
+  margin-left: -120px;
   font-family: 'Poiret One';
   font-size: 250%;
   color: #fff;
@@ -214,12 +214,81 @@ div
   /*border: solid #daf6ff;*/
   /*border-width: 1px;*/
   margin-top: -200px;
-  margin-left: -150px;
+  margin-left: -120px;
   font-family: 'Poiret One';
   font-size: 250%;
   color: #fff;
   text-align: justify;
 }
+
+#condition-icon
+{
+  height: 75px;
+  width: 50px;
+  /*border: solid #daf6ff;*/
+  /*border-width: 1px;*/
+  margin-top: -100px;
+  margin-left: -200px;
+  color: #00b3b3;
+  font-family: 'Poiret One';
+  font-size: 220%;
+}
+
+.fa-cloud
+{
+  color: #00b3b3;
+}
+
+
+#condition-text
+{
+  height: 75px;
+  width: 500px;
+  /*border: solid #daf6ff;*/
+  /*border-width: 1px;*/
+  margin-top: -100px;
+  margin-left: -120px;
+  font-family: 'Poiret One';
+  font-size: 250%;
+  color: #fff;
+  text-align: justify;
+}
+
+#wind-speed-icon
+{
+  height: 75px;
+  width: 50px;
+  /*border: solid #daf6ff;*/
+  /*border-width: 1px;*/
+  margin-top: 0px;
+  margin-left: -200px;
+  color: #00b3b3;
+  font-family: 'Poiret One';
+  font-size: 220%;
+}
+
+.fa-wifi
+{
+  color: #00b3b3;
+}
+
+
+#wind-speed-text
+{
+  height: 75px;
+  width: 500px;
+  /*border: solid #daf6ff;*/
+  /*border-width: 1px;*/
+  margin-top: -0px;
+  margin-left: -120px;
+  font-family: 'Poiret One';
+  font-size: 250%;
+  color: #fff;
+  text-align: justify;
+}
+
+
+
 
 /* Animation Effects for moonrise and twinkiling stars */
 
