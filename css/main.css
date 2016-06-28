@@ -2,7 +2,8 @@
 body 
 {
   height: 100vh;
-  background-image: radial-gradient(1600px at 70% 120%, rgba(33, 39, 80, 1) 10%, #020409 100%); 
+  /*background-image: radial-gradient(1600px at 70% 120%, rgba(33, 39, 80, 1) 10%, #020409 100%); */
+  background-image: radial-gradient(1600px at 70% 120%, rgb(0, 191, 255) 10%, #00ffff 100%);   
   width: 100%;
   overflow-x: hidden;
   overflow-y: hidden;
@@ -145,7 +146,8 @@ div
   font-family: 'Poiret One';
   font-weight: 100;
   font-size: 350%;
-  color: #FFFFFF;
+  /*color: #FFFFFF;*/
+  color: #666666;
   align: center;
 }
 
@@ -160,8 +162,8 @@ div
   /*border-radius: 700px 0 0 0;*/
   margin-left: -115px;
   margin-top: -250px;
-  border: solid #daf6ff;
-  border-width: 1px;
+  /*border: solid #daf6ff;*/
+  /*border-width: 1px;*/
 }
 
 #location-icon
@@ -176,7 +178,8 @@ div
 
 .fa-map-marker
 {
-  color: #00b3b3;
+  /*color: #00b3b3;*/
+  color: #FFFFFF;
 }
 
 #location-text
@@ -189,7 +192,8 @@ div
   margin-left: -120px;
   font-family: 'Poiret One';
   font-size: 250%;
-  color: #fff;
+  /*color: #fff;*/
+  color: #666666;
   text-align: justify;
 
 }
@@ -202,7 +206,8 @@ div
   /*border-width: 1px;*/
   margin-top: -200px;
   margin-left: -200px;
-  color: #00b3b3;
+  /*color: #00b3b3;*/
+  color: #FFFFFF;
   font-family: 'Poiret One';
   font-size: 220%;
 }
@@ -217,7 +222,8 @@ div
   margin-left: -120px;
   font-family: 'Poiret One';
   font-size: 250%;
-  color: #fff;
+  /*color: #fff;*/
+  color: #666666;
   text-align: justify;
 }
 
@@ -229,14 +235,16 @@ div
   /*border-width: 1px;*/
   margin-top: -100px;
   margin-left: -200px;
-  color: #00b3b3;
+  /*color: #00b3b3;*/
+  color: #FFFFFF;
   font-family: 'Poiret One';
   font-size: 220%;
 }
 
 .fa-cloud
 {
-  color: #00b3b3;
+  /*color: #00b3b3;*/
+  color: #FFFFFF;
 }
 
 
@@ -250,7 +258,8 @@ div
   margin-left: -120px;
   font-family: 'Poiret One';
   font-size: 250%;
-  color: #fff;
+  /*color: #fff;*/
+  color: #666666;
   text-align: justify;
 }
 
@@ -269,7 +278,8 @@ div
 
 .fa-wifi
 {
-  color: #00b3b3;
+  /*color: #00b3b3;*/
+  color: #FFFFFF;
 }
 
 
@@ -279,11 +289,12 @@ div
   width: 500px;
   /*border: solid #daf6ff;*/
   /*border-width: 1px;*/
-  margin-top: -0px;
+  margin-top: 0px;
   margin-left: -120px;
   font-family: 'Poiret One';
   font-size: 250%;
-  color: #fff;
+  /*color: #fff;*/
+  color: #666666;
   text-align: justify;
 }
 
