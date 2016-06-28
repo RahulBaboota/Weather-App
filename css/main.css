@@ -17,6 +17,20 @@ div
 }
 
 
+/*Basic Sun Structure*/
+
+#sun
+{
+ height: 120px;
+  width: 120px;
+  /*background: #c7cbd0;*/
+  margin-left: -58%;
+  margin-top: -25%;
+  border-radius: 50%;
+  background: #ffff33; 
+}
+
+
 /*Basic Moon Structure*/
 
 #moon
@@ -28,6 +42,7 @@ div
 	margin-top: -25%;
 	border-radius: 50%;
 	box-shadow: inset 12px -9px 3px #857c7c;
+  opacity: 0;
 }
 
 
