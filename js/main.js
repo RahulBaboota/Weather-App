@@ -10,9 +10,9 @@ var getLocation = function()
 {
 	$.get('http://ipinfo.io', function(response)
 	{
-		var ip = response.ip;
-		var city = response.city;
-		var region = response.region;
+		ip = response.ip;
+		city = response.city;
+		region = response.region;
 	},
 		'jsonp');
 };
