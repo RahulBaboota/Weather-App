@@ -39,7 +39,10 @@ var getWeather = function()
 
 		success: function(data)
 		{
-			console.log(data);
+			temperature = data['main']['temp']
+			weather_condition = data['weather'][0]['main']
+			wind_speed = data['wind']['speed']
+			console.log(wind_speed);
 		},
 
 		//If the request is unsuccessful
