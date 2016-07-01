@@ -39,10 +39,10 @@ var getWeather = function()
 
 		success: function(data)
 		{
-			temperature = data['main']['temp']
-			weather_condition = data['weather'][0]['main']
-			wind_speed = data['wind']['speed']
-			console.log(wind_speed);
+			temperature = (data['main']['temp'] - 273),
+			weather_condition = data['weather'][0]['main'],
+			wind_speed = data['wind']['speed'],
+			console.log(temperature);
 		},
 
 		//If the request is unsuccessful
