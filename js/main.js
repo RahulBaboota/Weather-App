@@ -3,6 +3,9 @@
 var ip;
 var city;
 var region;
+var temperature;
+var weather_condition;
+var wind_speed;
 
 // Function which gets the location of the browser 
 
@@ -24,7 +27,7 @@ var getWeather = function()
 {
 	$.ajax(
 	{
-		url:'http://api.openweathermap.org/data/2.5/weather?q=New%20Delhi&appid=a907b62ef4d40465fbfbe6ca63b1423c',
+		url:'http://api.openweathermap.org/data/2.5/weather?q='+city+'&appid=a907b62ef4d40465fbfbe6ca63b1423c',
 		dataType: 'json',
 		type: 'GET',
 		xhrFields:
