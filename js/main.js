@@ -39,7 +39,7 @@ var getWeather = function()
 
 		success: function(data)
 		{
-			temperature = (data['main']['temp'] - 273),
+			temperature = Math.round((data['main']['temp'] - 273)),
 			weather_condition = data['weather'][0]['main'],
 			wind_speed = data['wind']['speed'],
 			console.log(temperature);
