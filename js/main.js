@@ -11,13 +11,13 @@ var wind_speed;
 
 var getLocation = function()
 {
-	$.get('http://ipinfo.io', function(response)
-	{
-		ip = response.ip;
-		city = response.city;
-		region = response.region;
-	},
-		'jsonp');
+    $.get('http://ipinfo.io', function(response)
+    {
+        ip = response.ip;
+        city = response.city;
+        region = response.region;
+    },
+        'jsonp');
 };
 
 
@@ -25,34 +25,55 @@ var getLocation = function()
 
 var getWeather = function()
 {
-	$.ajax(
-	{
-		url:'http://api.openweathermap.org/data/2.5/weather?q='+city+'&appid=a907b62ef4d40465fbfbe6ca63b1423c',
-		dataType: 'json',
-		type: 'GET',
-		xhrFields:
-		{
-			withCredentials: false,
-		},
+    $.ajax(
+    {
+        url:'http://api.openweathermap.org/data/2.5/weather?q='+city+'&appid=a907b62ef4d40465fbfbe6ca63b1423c',
+        dataType: 'json',
+        type: 'GET',
+        xhrFields:
+        {
+            withCredentials: false,
+        },
 
-		// If the request is successful
+        // If the request is successful
 
-		success: function(data)
-		{
-			temperature = Math.round((data['main']['temp'] - 273)),
-			weather_condition = data['weather'][0]['main'],
-			wind_speed = data['wind']['speed'],
-			console.log(temperature);
-		},
+        success: function(data)
+        {
+            temperature = Math.round((data['main']['temp'] - 273)),
+            weather_condition = data['weather'][0]['main'],
+            wind_speed = data['wind']['speed'],
 
-		//If the request is unsuccessful
+            $('#location-text').fadeOut(750, function()
+            {
+                $('#location-text').html(city).fadeIn(750);
+            })
 
-		error: function(data)
-		{
-			console.log('There was a problem with the API request');
-		}
-	});
+            $('#temperature-text').fadeOut(750, function()
+            {
+                $('#temperature-text').html(temperature).fadeIn(750);
+            })
+
+            $('#condition-text').fadeOut(750, function()
+            {
+                $('#condition-text').html(weather_condition).fadeIn(750);
+            })
+
+            $('#wind-speed-text').fadeOut(750, function()
+            {
+                $('#wind-speed-text').html(wind_speed).fadeIn(750);
+            })
+
+        },
+
+        
+        //If the request is unsuccessful
+
+        error: function(data)
+        {
+            console.log('There was a problem with the API request');
+        }
+    });
 };
 
-getWeather()
-
+getLocation();
+getWeather();
