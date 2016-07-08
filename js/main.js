@@ -6,6 +6,7 @@ var region;
 var temperature;
 var weather_condition;
 var wind_speed;
+var time;
 
 // Function which gets the location of the browser 
 
@@ -19,6 +20,16 @@ var getLocation = function()
     },
         'jsonp');
 };
+
+// Function which gets the time from the browser 
+
+var getTime = function()
+{
+
+    var now = new Date();
+    time = [ now.getHours(), ':', now.getMinutes() ,':', now.getSeconds() ].join('');
+    
+}
 
 
 // Function which gets weather data from openweatherapi 
@@ -39,6 +50,7 @@ var getWeather = function()
 
         success: function(data)
         {
+            
             temperature = Math.round((data['main']['temp'] - 273)),
             weather_condition = data['weather'][0]['main'],
             wind_speed = data['wind']['speed'],
@@ -69,11 +81,14 @@ var getWeather = function()
         //If the request is unsuccessful
 
         error: function(data)
-        {
+        {   
+
             console.log('There was a problem with the API request');
+
         }
     });
 };
 
 getLocation();
 getWeather();
+getTime();
