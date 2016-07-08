@@ -166,9 +166,25 @@ div
   align: center;
 }
 
+/*Time-Box*/
 
+#clock-box
+{
+  height: 60px;
+  width: 60px;
+  /*border: solid #daf6ff;*/
+  /*border-width: 1px;*/
+  margin-top: -440px;
+  margin-left: -700px;
+}
 
-/*Weather - Box*/
+.fa-clock-o
+{
+  color: #00b3b3;
+  /*color: #FFFFFF;*/
+}
+
+/*Weather-Box*/
 
 #weather-box
 {
