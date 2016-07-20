@@ -7,6 +7,7 @@ var temperature;
 var weather_condition;
 var wind_speed;
 var time;
+var hours;
 
 // Function which gets the location of the browser 
 
@@ -27,8 +28,9 @@ var getTime = function()
 {
 
     var now = new Date();
+    hours = now.getHours();
     time = [ now.getHours(), ':', now.getMinutes() ,':', now.getSeconds() ].join('');
-    
+    // console.log(hours);
 }
 
 
@@ -89,6 +91,8 @@ var getWeather = function()
     });
 };
 
-getLocation();
-getWeather();
-getTime();
+// Function for night mode transition
+
+
+
+

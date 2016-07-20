@@ -2,7 +2,10 @@
 body 
 {
   height: 100vh;
-  background-image: radial-gradient(1600px at 70% 120%, rgba(33, 39, 80, 1) 10%, #020409 100%); 
+  background: #8E0E00; /* fallback for old browsers */
+  background: -webkit-linear-gradient(to left, #8E0E00 , #1F1C18); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to left, #8E0E00 , #1F1C18); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  /*background-image: radial-gradient(1600px at 70% 120%, rgba(33, 39, 80, 1) 10%, #020409 100%); */
   /*background-image: radial-gradient(1600px at 70% 120%, rgb(0, 191, 255) 10%, #00ffff 100%);   */
   width: 100%;
   overflow-x: hidden;
@@ -28,6 +31,7 @@ div
   margin-top: -25%;
   border-radius: 50%;
   background: #ffff33; 
+  opacity: 0;
 }
 
 
@@ -42,11 +46,12 @@ div
 	margin-top: -25%;
 	border-radius: 50%;
 	box-shadow: inset 12px -9px 3px #857c7c;
-  /*opacity: 0;*/
+  opacity: 0;
 }
 
 
 /*Basic Crater Properties*/
+
 .spot 
 {
 	border-radius: 50%;
@@ -161,28 +166,11 @@ div
   font-family: 'Poiret One';
   font-weight: 100;
   font-size: 350%;
-  /*color: #FFFFFF;*/
-  color: #666666;
+  color: #FFFFFF;
+  /*color: #666666;*/
   align: center;
 }
 
-/*Time-Box*/
-
-#clock-box
-{
-  height: 60px;
-  width: 60px;
-  /*border: solid #daf6ff;*/
-  /*border-width: 1px;*/
-  margin-top: -440px;
-  margin-left: -700px;
-}
-
-.fa-clock-o
-{
-  color: #00b3b3;
-  /*color: #FFFFFF;*/
-}
 
 /*Weather-Box*/
 
@@ -205,6 +193,7 @@ div
   /*border-width: 1px;*/
   margin-top: -300px;
   margin-left: -200px;
+  opacity: 0;
 }
 
 .fa-map-marker
@@ -226,7 +215,6 @@ div
   color: #fff;
   /*color: #666666;*/
   text-align: justify;
-
 }
 
 #temperature-icon
@@ -241,6 +229,7 @@ div
   /*color: #FFFFFF;*/
   font-family: 'Poiret One';
   font-size: 220%;
+  opacity: 0;
 }
 
 #temperature-text
@@ -270,6 +259,7 @@ div
   /*color: #FFFFFF;*/
   font-family: 'Poiret One';
   font-size: 220%;
+  opacity: 0;
 }
 
 .fa-cloud
@@ -305,6 +295,7 @@ div
   color: #00b3b3;
   font-family: 'Poiret One';
   font-size: 220%;
+  opacity: 0;
 }
 
 .fa-wifi
@@ -329,7 +320,39 @@ div
   text-align: justify;
 }
 
+/*Weather Button*/
 
+.btn
+{ 
+  font-family: "Poiret One";
+  font-size: 200%;
+  height: 100px;
+  width: 100%;
+  left: -65%;
+  top: 30%;
+}
+
+
+#button
+{
+  
+  border: 1px solid #FFFFFF;
+  color: #FFFFFF;
+  padding: 10px 28px;
+  cursor: pointer;
+  text-decoration: none;
+  text-align: center;
+  -webkit-transition: all 0.4s ease-in-out; /* Safari */
+  transition: all 0.4s ease-in-out;
+}
+
+#button:hover
+{
+  background: #FFFFFF;
+  color: #F50057;
+}
+
+/*-------------------------------------------------------------------------------------------------------------------------------*/
 
 
 /* Animation Effects for moonrise and twinkiling stars */
