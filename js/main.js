@@ -13,14 +13,13 @@ var hours;
 
 var getLocation = function()
 {
-    $.get('http://ipinfo.io', function(response)
+    $.getJSON('http://ipinfo.io', function(response)
     {
         ip = response.ip;
         city = response.city;
         region = response.region;
-    },
-        'jsonp');
-};
+    })
+}
 
 // Function which gets the time from the browser 
 
@@ -56,6 +55,7 @@ var getWeather = function()
             temperature = Math.round((data['main']['temp'] - 273)),
             weather_condition = data['weather'][0]['main'],
             wind_speed = data['wind']['speed'],
+            console.log(city);
 
             $('#location-text').fadeOut(750, function()
             {
@@ -93,6 +93,48 @@ var getWeather = function()
 
 // Function for night mode transition
 
+var nightMode = function()
+{
+    $('#button').on('click' , function()
+    {
+        // console.log(hours);
+        if (hours>20)
+        {
+            $('body').fadeOut(750 , function()
+            {
+                $('body').css('background-image' , 'radial-gradient(1600px at 70% 120%, rgba(33, 39, 80, 1) 10%, #020409 100%)');
+                $('body').fadeIn(750);
+                $('#moon').css('opacity','100');
+                $('#location-icon').fadeIn(750 , function()
+                {
+                    $('#location-icon').css('opacity','100');
+                })
+
+                $('#temperature-icon').fadeIn(750 , function()
+                {
+                    $('#temperature-icon').css('opacity','100');
+                })
+
+                $('#condition-icon').fadeIn(750 , function()
+                {
+                    $('#condition-icon').css('opacity','100');
+                })
+
+                $('#wind-speed-icon').fadeIn(750 , function()
+                {
+                    $('#wind-speed-icon').css('opacity','100');
+                })
+
+                getWeather();
+            })
+        }
+    })
+}
+
+// getLocation();
+getTime();
+// getWeather();
+nightMode();
 
 
 
