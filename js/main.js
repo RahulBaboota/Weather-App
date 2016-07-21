@@ -97,7 +97,6 @@ var nightMode = function()
 {
     $('#button').on('click' , function()
     {
-        // console.log(hours);
         if (hours>20)
         {
             $('body').fadeOut(750 , function()
@@ -131,10 +130,58 @@ var nightMode = function()
     })
 }
 
+// Function for day mode transition
+
+var dayMode = function()
+{
+    $('#button').on('click' , function()
+    {
+        if(hours>5 && hours<20)
+        {
+            $('body').fadeOut(750 , function()
+            {
+                $('body').css('background-image' , 'radial-gradient(1600px at 70% 120%, rgb(0, 191, 255) 10%, #00ffff 100%)');
+                $('body').fadeIn(750);
+                $('#sun').css('opacity','100');
+                $('#Heading-box').css('color','#666666');
+                $('#button').css('color','#666666');
+
+                $('#location-icon').fadeIn(750 , function()
+                {
+                    $('.fa-map-marker').css('color','#FFFFFF');
+                    $('#location-icon').css('opacity','100');
+                })
+
+                $('#temperature-icon').fadeIn(750 , function()
+                {
+                    $('#temperature-icon').css('color','#FFFFFF');
+                    $('#temperature-icon').css('opacity','100');
+                })
+
+                $('#condition-icon').fadeIn(750 , function()
+                {
+                    $('.fa-cloud').css('color','#FFFFFF');
+                    $('#condition-icon').css('opacity','100');
+                })
+
+                $('#wind-speed-icon').fadeIn(750 , function()
+                {
+                    $('.fa-wifi').css('color','#FFFFFF');
+                    $('#wind-speed-icon').css('opacity','100');
+                })
+
+                getWeather();
+            })
+        }
+
+    })
+}
+
 // getLocation();
 getTime();
 // getWeather();
 nightMode();
+dayMode();
 
 
 
