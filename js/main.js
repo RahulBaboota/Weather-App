@@ -18,7 +18,8 @@ var getLocation = function()
         ip = response.ip;
         city = response.city;
         region = response.region;
-    })
+    }),
+        'jsonp';
 }
 
 // Function which gets the time from the browser 
@@ -177,11 +178,16 @@ var dayMode = function()
     })
 }
 
-// getLocation();
-getTime();
-// getWeather();
-nightMode();
-dayMode();
 
+// Document ready function
+
+$(document).ready(function()
+{   
+    getLocation();
+    getTime();
+    dayMode();
+    nightMode();
+
+});
 
 
