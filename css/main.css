@@ -121,8 +121,8 @@ div
   border-width: 1px;*/
   -webkit-transform: rotate(90deg);
   transform: rotate(90deg);
-  -webkit-animation-name: moonrise;
-  animation-name: moonrise;
+  -webkit-animation-name: rise;
+  animation-name: rise;
   -webkit-animation-duration: 3s;
   animation-duration: 3s;
   -webkit-animation-iteration-count: 1;
@@ -136,14 +136,14 @@ div
 #scene 
 {
   height: 100%;
-  position: absolute;
-  left: 50%;
-  margin-left: -800px;
+  position: fixed;
+  left: 10%;
+  top: 75%;
 }
 
 #footer 
 {
-  position: absolute;
+  position: fixed;
   bottom: 0px;
   height: 300px;
   width: 100%;
@@ -162,7 +162,7 @@ div
   width: 800px;
   /*border: solid #daf6ff;*/
   /*border-width: 1px;*/
-  margin-top: -350px;
+  margin-top: -430px;
   font-family: 'Poiret One';
   font-weight: 100;
   font-size: 350%;
@@ -284,42 +284,6 @@ div
   text-align: justify;
 }
 
-#wind-speed-icon
-{
-  height: 75px;
-  width: 50px;
-  /*border: solid #daf6ff;*/
-  /*border-width: 1px;*/
-  margin-top: 0px;
-  margin-left: -200px;
-  color: #00b3b3;
-  font-family: 'Poiret One';
-  font-size: 220%;
-  opacity: 0;
-}
-
-.fa-wifi
-{
-  color: #00b3b3;
-  /*color: #FFFFFF;*/
-}
-
-
-#wind-speed-text
-{
-  height: 75px;
-  width: 500px;
-  /*border: solid #daf6ff;*/
-  /*border-width: 1px;*/
-  margin-top: 0px;
-  margin-left: -120px;
-  font-family: 'Poiret One';
-  font-size: 250%;
-  color: #fff;
-  /*color: #666666;*/
-  text-align: justify;
-}
-
 /*Weather Button*/
 
 .btn
@@ -355,9 +319,9 @@ div
 /*-------------------------------------------------------------------------------------------------------------------------------*/
 
 
-/* Animation Effects for moonrise and twinkiling stars */
+/* Animation Effects for rise and sunrise */
 
-@-webkit-keyframes moonrise 
+@-webkit-keyframes rise 
 {
   0% {
     -webkit-transform: rotate(0deg);
@@ -369,7 +333,7 @@ div
   }
 }
 
-@-o-keyframes moonrise
+@-o-keyframes rise
 {
 	0%{
 		-webkit-transform: rotate(0deg);
@@ -381,7 +345,7 @@ div
 	}
 }
 
-@-moz-keyframes moonrise
+@-moz-keyframes rise
 {
 	0% {
 		-webkit-tranform: rotate(0deg);
@@ -395,7 +359,7 @@ div
 
 
 
-@keyframes moonrise 
+@keyframes rise 
 {
   0% {
     -webkit-transform: rotate(0deg);

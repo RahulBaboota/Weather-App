@@ -55,7 +55,6 @@ var getWeather = function()
             
             temperature = Math.round((data['main']['temp'] - 273)),
             weather_condition = data['weather'][0]['main'],
-            wind_speed = data['wind']['speed'],
             console.log(city);
 
             $('#location-text').fadeOut(750, function()
@@ -71,11 +70,6 @@ var getWeather = function()
             $('#condition-text').fadeOut(750, function()
             {
                 $('#condition-text').html(weather_condition).fadeIn(750);
-            })
-
-            $('#wind-speed-text').fadeOut(750, function()
-            {
-                $('#wind-speed-text').html(wind_speed).fadeIn(750);
             })
 
         },
@@ -98,7 +92,7 @@ var nightMode = function()
 {
     $('#button').on('click' , function()
     {
-        if (hours>20)
+        if (hours>=20)
         {
             $('body').fadeOut(750 , function()
             {
@@ -163,12 +157,6 @@ var dayMode = function()
                 {
                     $('.fa-cloud').css('color','#FFFFFF');
                     $('#condition-icon').css('opacity','100');
-                })
-
-                $('#wind-speed-icon').fadeIn(750 , function()
-                {
-                    $('.fa-wifi').css('color','#FFFFFF');
-                    $('#wind-speed-icon').css('opacity','100');
                 })
 
                 getWeather();
